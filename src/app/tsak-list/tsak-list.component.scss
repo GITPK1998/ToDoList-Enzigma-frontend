@@ -1,0 +1,129 @@
+.container {
+    margin-top: 50px;
+}
+
+/* Grid container for the main layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1px;
+    padding: 16px;
+    align-items: stretch;
+    justify-items: stretch;
+    
+}
+
+.total-count {
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for icons */
+mat-icon {
+    color: #b54b3f; 
+    margin-right: 10px;
+}
+
+/* Align search actions and set flex properties */
+.search-actions {
+    grid-column: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+/* Style for button container to align buttons inline */
+.button-container {
+    display: flex;
+    margin-bottom: 8px; 
+}
+
+button.mat-stroked-button {
+    border-radius: 0; 
+    padding: 10px 20px; 
+    height: 40px; 
+    line-height: 1.2; 
+    text-transform: none; 
+    border: 1px solid #ccc; 
+    flex: 1; 
+}
+
+
+/* Style for search bar to take up 1/4 of the container */
+.search-bar {
+    width: 100%; 
+}
+
+/* Container for the table */
+.table-container {
+    overflow: hidden; 
+}
+
+/* Wrapper for the table to enable scrolling */
+.table-wrapper {
+    max-height: 315px; 
+    overflow: auto;
+    border: 1px solid #ccc; 
+}
+
+/* Sticky header for the table */
+.sticky-header {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    background-color: white; 
+    z-index: 1; 
+}
+
+/* Style for the table */
+.example-table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+/* Button styles */
+.cancel {
+    background-color: #ffe487 !important;
+}
+
+.ok {
+    background-color: #87ff97 !important;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+
+    .container{
+        height: auto;
+        padding: 0 16px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto auto;
+    }
+    .search-bar {
+        width: 100%; 
+    }
+    .button-container {
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+  
+}
+
+@media (max-width: 580px) {
+    .search-bar {
+        width: 100%;
+    }
+    .container {
+        height: 500px;
+        padding: 0 16px;
+    }
+    .table-wrapper {
+        max-height: 200px; 
+    }
+   
+    
+}
